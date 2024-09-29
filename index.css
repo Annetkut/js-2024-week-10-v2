@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+width: 100%;
+height: 100vh;
+background: linear-gradient(to bottom, #222, #444);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    max-width: 400px; /* Ограничиваем ширину контейнера */
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px; /* Ограничиваем ширину контейнера */
+    margin-top: 20px;
+
+}
+
+button {
+    font-size: 16px;
+    background-color: pink;
+    color: #222;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #45a049; /* Темнее на оттенок при наведении */
+    cursor: pointer;           /* Меняем указатель мыши на "руку" */
+}
+.price-container {
+    margin-top: 20px; /* Отступ сверху */
+    display: flex; /* Используем Flexbox для центрирования */
+    justify-content: center; /* Центрируем по горизонтали */
+}
+
+#price {
+    display: inline-block; /* Чтобы поведение было как у кнопки */
+    background-color: transparent; /* Фон ссылки */
+    color: white; /* Цвет текста */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+
+@media (max-width: 600px) {
+    .image-container, .button-container {
+        max-width: 300px; /* Уменьшаем ширину на мобильных устройствах */
+    }
+
+    button {
+        font-size: 14px; /* Уменьшаем шрифт кнопок для мобильных устройств */
+        padding: 8px 16px; /* Уменьшаем внутренние отступы кнопок */
+    }
+}
